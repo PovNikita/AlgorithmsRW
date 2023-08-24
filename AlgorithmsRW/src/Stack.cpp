@@ -6,26 +6,32 @@ int stack_static::length()
     return SIZE_OF_STACK_ST;
 }
 
-void stack_static::ShowallStack()
+void stack_static::ShowStack()
 {
-    std::cout << "Stack:\n";
-    int i;
-    for (i = 0; i < n; i++)
+    if (n > 0)
     {
-        cout << Stack[i] << "; ";
+        cout << "The static stack:\n";
+        for (int i = 0; i < n; i++)
+        {
+            cout << Stack[i] << "; ";
+        }
+        cout << "\n";
     }
-    std::cout << "\n";
+    else if (n == 0)
+    {
+        cout << "The stack is empty\n";
+    }
 }
 
-void stack_static::Push(double element)
+void stack_static::Push(float element)
 {
     Stack[n] = element;
     n = n + 1;
 }
 
-double stack_static::Pop()
+float stack_static::Pop()
 {
-    double element;
+    float element;
     if (n > 0)
     {
         element = Stack[n - 1];
@@ -40,7 +46,7 @@ double stack_static::Pop()
     }
 }
 
-double stack_static::top()
+float stack_static::top()
 {
     if (n > 0)
     {
@@ -72,8 +78,8 @@ bool stack_static::IsStackEmpty()
 
 void stack_static::FullnessOfStack()
 {
-    double empty;
-    double a = n;
+    float empty;
+    float a = n;
     empty = (1 - a / SIZE_OF_STACK_ST) * 100;
     cout << "Empty space: " << empty << "%\n" << "You can add " << SIZE_OF_STACK_ST - n << " element(s)\n";
 }
@@ -86,15 +92,21 @@ stack_dynamic::stack_dynamic()
     n = 10;
 }
 
-void stack_dynamic::ShowallStack()
+void stack_dynamic::ShowStack()
 {
-    cout << "Stack:\n";
-    int i;
-    for (i = 0; i < n; i++)
+    if (lenS > 0)
     {
-        std::cout << Stack[i] << "; ";
+        cout << "The dynamic stack:\n";
+        for (int i = 0; i < lenS; i++)
+        {
+            cout << Stack[i] << "; ";
+        }
+        cout << "\n";
     }
-    std::cout << "\n";
+    else if (lenS == 0)
+    {
+        cout << "The stack is empty\n";
+    }
 }
 
 void stack_dynamic::Push(float element)
