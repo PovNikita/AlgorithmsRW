@@ -79,7 +79,7 @@ bool stack_static::IsStackEmpty()
 void stack_static::FullnessOfStack()
 {
     float empty;
-    float a = n;
+    float a = (float)n;
     empty = (1 - a / SIZE_OF_STACK_ST) * 100;
     cout << "Empty space: " << empty << "%\n" << "You can add " << SIZE_OF_STACK_ST - n << " element(s)\n";
 }
@@ -184,8 +184,8 @@ bool stack_dynamic::IsStackEmpty()
 void stack_dynamic::FullnessOfStack()
 {
     float empty;
-    float a = lenS;
-    float b = n;
+    float a = (float)lenS;
+    float b = (float)n;
     empty = (1 - a / b) * 100;
     cout << "Empty space: " << empty << "%\n" << "You can add " << n - lenS << " element(s)\n";
 }
