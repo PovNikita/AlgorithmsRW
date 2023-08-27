@@ -190,7 +190,7 @@ void stack_dynamic::FullnessOfStack()
     cout << "Empty space: " << empty << "%\n" << "You can add " << n - lenS << " element(s)\n";
 }
 
-void stack_dynamic::FreeMemory()
+stack_dynamic::~stack_dynamic()
 {
     free(Stack);
 }
