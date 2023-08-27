@@ -104,12 +104,13 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>C:\Users\1213779\source\repos\AlgorithmsRW\AlgorithmsRW\inc;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\1213779\source\repos\AlgorithmsRW\AlgorithmsRW\SFML-2.6.0\include;C:\Users\1213779\source\repos\AlgorithmsRW\AlgorithmsRW\inc;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalLibraryDirectories>C:\Users\1213779\source\repos\AlgorithmsRW\AlgorithmsRW\src;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>C:\Users\1213779\source\repos\AlgorithmsRW\AlgorithmsRW\SFML-2.6.0\bin;C:\Users\1213779\source\repos\AlgorithmsRW\AlgorithmsRW\SFML-2.6.0\lib;C:\Users\1213779\source\repos\AlgorithmsRW\AlgorithmsRW\src;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>sfml-audio-d.lib;sfml-graphics-d.lib;sfml-network-d.lib;sfml-system-d.lib;sfml-window-d.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -120,23 +121,30 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>C:\Users\1213779\source\repos\AlgorithmsRW\AlgorithmsRW\inc;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\1213779\source\repos\AlgorithmsRW\AlgorithmsRW\SFML-2.6.0\include;C:\Users\1213779\source\repos\AlgorithmsRW\AlgorithmsRW\inc;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalLibraryDirectories>C:\Users\1213779\source\repos\AlgorithmsRW\AlgorithmsRW\src;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>C:\Users\1213779\source\repos\AlgorithmsRW\AlgorithmsRW\SFML-2.6.0\lib;C:\Users\1213779\source\repos\AlgorithmsRW\AlgorithmsRW\src;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>sfml-audio.lib;sfml-graphics.lib;sfml-network.lib;sfml-system.lib;sfml-window.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp" />
     <ClCompile Include="src\Add_functions.cpp" />
+    <ClCompile Include="src\Graph.cpp" />
+    <ClCompile Include="src\List.cpp" />
+    <ClCompile Include="src\Queue.cpp" />
     <ClCompile Include="src\Stack.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="inc\Add_functions.h" />
+    <ClInclude Include="inc\Graph.h" />
+    <ClInclude Include="inc\List.h" />
+    <ClInclude Include="inc\Queue.h" />
     <ClInclude Include="inc\Stack.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

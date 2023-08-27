@@ -38,5 +38,5 @@ public:
     int LengthOfStack();        //This method returns a current number of elements
     bool IsStackEmpty();        //This method returns 1, if the stack is empty or returns if the stack has some elements
     void FullnessOfStack();     //This method shows information about the stack: Empty space, the number of available cells
-    void FreeMemory();          //This method free memory which is taken for a stack
+    ~stack_dynamic();           //This destructor frees memory which is taken for a stack
 };
