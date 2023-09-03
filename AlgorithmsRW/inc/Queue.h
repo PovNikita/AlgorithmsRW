@@ -25,9 +25,9 @@ class Queue_cl
 
 public:
     Queue_cl();             //This constructor creates a Queue
-    void EnQueue(float i); //This method adds an element to the queue
+    void EnQueue(float i);  //This method adds an element to the queue
     bool IsQueueEmpty();    //This method returns 1, if the queue is empty or returns if the queue has some elements
-    float DeQueue();       //This method returns an element from the queue
+    float DeQueue();        //This method returns an element from the queue
     void ShowQueue();       //This method puts on a screen all elements of the queue
     void ShowAllQueue();    //This method puts on a screen all elements of the queue including removed elements
     ~Queue_cl();            //This destructor frees memory what was used for the queue

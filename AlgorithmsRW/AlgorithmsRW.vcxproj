@@ -144,6 +144,7 @@
     <ClInclude Include="inc\Add_functions.h" />
     <ClInclude Include="inc\Graph.h" />
     <ClInclude Include="inc\List.h" />
+    <ClInclude Include="inc\Priority_queue.h" />
     <ClInclude Include="inc\Queue.h" />
     <ClInclude Include="inc\Stack.h" />
   </ItemGroup>

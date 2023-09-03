@@ -1,15 +1,19 @@
 #include <iostream>
 #include <ctime>
-#include <cstring>
 #include <stdio.h>
 #include <chrono>
 #include <SFML/Graphics.hpp>
 #include <random>
+#include <vector>
+#include <string>
+#include <cstdio>
+
 
 /******************************************CREATED_LIBRARIES**********************************/
 #include "Add_functions.h"
 #include "List.h"
 #include "Graph.h" //Here "Stack.h" and "Queue.h" are included
+#include "Priority_queue.h"
 
 using namespace std;
 using namespace sf;
@@ -215,8 +219,14 @@ void calculatePosition(GraphNode** p)
 }
 //********************************************************************
 
+//These variables and functions are for the sixth exercise
+//********************************************************************
+
+//********************************************************************
+
 void chapter_1();
 void chapter_2();
+void chapter_3();
 
 int main()
 {
@@ -236,7 +246,7 @@ int main()
         }
         else if (ch_n == '3')
         {
-
+            chapter_3();
         }
     }
     return 0;
@@ -722,3 +732,127 @@ void chapter_2()
     }
 
 }
+
+void chapter_3()
+{
+    char ex_n = '0';
+    while (ex_n != 'e')
+    {
+        cout << "Please enter the number of a exercise you need\nIf you want to exit, enter 'e'\n";
+        cin >> ex_n;
+        ///Exercise 1
+        if (ex_n == '1')
+        {
+            string str;
+            cout << "This program converts your message into ASCII format and then converts it into angles.\n";
+            cin.ignore();
+            getline(cin, str);
+            vector<vector<float>> angles;
+            angles.resize(2);
+            int ASCII_NUM = 0;
+            float step = 360.0f / 16.0f;
+            char ch = str.at(0);
+            for (int i = 0; ; )
+            {
+                ASCII_NUM = (int)ch;
+                angles[0].push_back(step * (ASCII_NUM / 16));
+                angles[1].push_back(step * (ASCII_NUM % 16));
+                i++;
+                if (i >= str.size())
+                    break;
+                ch = str.at(i);
+            }
+            cout << "Angles:\n";
+            for (int i = 0; i < angles[0].size(); i++)
+            {
+                cout << angles[0][i] << ";\t" << angles[1][i] << endl;
+            }
+            
+        }
+        ///Exercise 2
+        else if (ex_n == '2')
+        {
+            cout << "MinPriorityQueue\n";
+            MinPriorityQueue<int> Pq;
+            cout << "InsertInPQ - insert data in a priority queue\n";
+            Pq.InsertInPQ(19);
+            Pq.Show();
+            cout << "InsertInPQ\n";
+            Pq.InsertInPQ(17);
+            Pq.Show();
+            cout << "InsertInPQ\n";
+            Pq.InsertInPQ(8);
+            Pq.Show();
+            cout << "InsertInPQ\n";
+            Pq.InsertInPQ(13);
+            Pq.Show();
+            cout << "InsertInPQ\n";
+            Pq.InsertInPQ(11);
+            Pq.Show();
+            cout << "InsertInPQ\n";
+            Pq.InsertInPQ(6);
+            Pq.Show();
+            cout << "ExtractMinFromPQ - extraxt a minimum node of a priority queue\n";
+            Pq.ExtractMinFromPQ();
+            Pq.Show();
+            cout << "ExtractMaxFromPQ\n";
+            Pq.ExtractMinFromPQ();
+            Pq.Show();
+            cout << "MaxPriorityQueue\n";
+            cout << "This program shows examples of functions for priority queue\n";
+            MaxPriorityQueue<int> PqM;
+            cout << "InsertInPQ - insert data in a priority queue\n";
+            PqM.InsertInPQ(11);
+            PqM.Show();
+            cout << "InsertInPQ\n";
+            PqM.InsertInPQ(13);
+            PqM.Show();
+            cout << "InsertInPQ\n";
+            PqM.InsertInPQ(6);
+            PqM.Show();
+            cout << "InsertInPQ\n";
+            PqM.InsertInPQ(8);
+            PqM.Show();
+            cout << "InsertInPQ\n";
+            PqM.InsertInPQ(17);
+            PqM.Show();
+            cout << "InsertInPQ\n";
+            PqM.InsertInPQ(19);
+            PqM.Show();
+            cout << "ExtractMaxFromPQ - extraxt a maximum node of a priority queue\n";
+            PqM.ExtractMaxFromPQ();
+            PqM.Show();
+            cout << "ExtractMaxFromPQ\n";
+            PqM.ExtractMaxFromPQ();
+            PqM.Show();
+
+
+        }
+        ///Exercise 3
+        else if (ex_n == '3')
+        {
+
+        }
+        ///Exercise 4
+        else if (ex_n == '4')
+        {
+
+        }
+        ///Exercise 5
+        else if (ex_n == '5')
+        {
+
+        }
+        ///Exercise 6
+        else if (ex_n == '6')
+        {
+
+        }
+        ///Exercise 7
+        else if (ex_n == '7')
+        {
+
+        }
+    }
+}
+
