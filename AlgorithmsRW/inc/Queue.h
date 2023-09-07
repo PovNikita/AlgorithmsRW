@@ -5,12 +5,14 @@ using namespace std;
 
 const int Size_of_Queue = 110; // The size of a Queue
 
+#pragma pack(push, 1)
 struct Queue {
     float M[Size_of_Queue] = { 0 };    //This massive holds elements of the queue
     int h = 0;          //This element saves a place of the first element of the queue
     int t = 0;          //This element saves a place after the last added element of the queue
     int quantity = 0;   //The number of added elements in the queue
 };
+#pragma pack(pop)
 
 Queue* CreateQueue();   //This function creates a Queue
 void EnQueue(Queue* Q, float i);   //This function adds an element to the queue

@@ -1,10 +1,12 @@
 #pragma once
 #include <iostream>
 
+#pragma pack(push, 1)
 struct Node {
     float data;    //It saves an element
     Node* next;     //It saves a pointer to the next element
 };
+#pragma pack(pop)
 
 Node* CreateList();     //This function creates a new list
 Node* CreateNode();     //This function creates a new node
