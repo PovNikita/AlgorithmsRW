@@ -831,7 +831,59 @@ void chapter_3()
         ///Exercise 3
         else if (ex_n == '3')
         {
-
+            cout << "MinPriorityQueue\n";
+            MinPriorityQueue0<int> Pq;
+            cout << "InsertInPQ - insert data in a priority queue\n";
+            Pq.InsertInPQ(19);
+            Pq.Show();
+            cout << "InsertInPQ\n";
+            Pq.InsertInPQ(17);
+            Pq.Show();
+            cout << "InsertInPQ\n";
+            Pq.InsertInPQ(8);
+            Pq.Show();
+            cout << "InsertInPQ\n";
+            Pq.InsertInPQ(13);
+            Pq.Show();
+            cout << "InsertInPQ\n";
+            Pq.InsertInPQ(11);
+            Pq.Show();
+            cout << "InsertInPQ\n";
+            Pq.InsertInPQ(6);
+            Pq.Show();
+            cout << "ExtractMinFromPQ - extraxt a minimum node of a priority queue\n";
+            Pq.ExtractMinFromPQ();
+            Pq.Show();
+            cout << "ExtractMaxFromPQ\n";
+            Pq.ExtractMinFromPQ();
+            Pq.Show();
+            cout << "MaxPriorityQueue\n";
+            cout << "This program shows examples of functions for priority queue\n";
+            MaxPriorityQueue0<int> PqM;
+            cout << "InsertInPQ - insert data in a priority queue\n";
+            PqM.InsertInPQ(11);
+            PqM.Show();
+            cout << "InsertInPQ\n";
+            PqM.InsertInPQ(13);
+            PqM.Show();
+            cout << "InsertInPQ\n";
+            PqM.InsertInPQ(6);
+            PqM.Show();
+            cout << "InsertInPQ\n";
+            PqM.InsertInPQ(8);
+            PqM.Show();
+            cout << "InsertInPQ\n";
+            PqM.InsertInPQ(17);
+            PqM.Show();
+            cout << "InsertInPQ\n";
+            PqM.InsertInPQ(19);
+            PqM.Show();
+            cout << "ExtractMaxFromPQ - extraxt a maximum node of a priority queue\n";
+            PqM.ExtractMaxFromPQ();
+            PqM.Show();
+            cout << "ExtractMaxFromPQ\n";
+            PqM.ExtractMaxFromPQ();
+            PqM.Show();
         }
         ///Exercise 4
         else if (ex_n == '4')
